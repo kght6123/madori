@@ -1,0 +1,10 @@
+services:
+  madori:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MADORI_HOST=0.0.0.0
+      - MADORI_PORT=3000
+      - MADORI_SHELL=/bin/bash
+    restart: unless-stopped
